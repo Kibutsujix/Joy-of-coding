@@ -13,7 +13,8 @@ void guess(int N)
 
 	printf("chit number picked between 1 and %d\n",N);
 
-	do {
+	do
+    {
 
 		if (attempt > 10) {
 			printf("\nYou Loose!\n");
@@ -24,15 +25,21 @@ void guess(int N)
 		scanf("%d", &guess);
 
 		
-		if (guess > chitnum && guess < chitnum)
+		if (guess > chitnum )
         {
-            printf("guess again");
-            attempt++;
+            printf("guess again\n");
+            attempt+=1;
         }
-		else
+        if (guess < chitnum)
+        {
+            printf("Guess again\n");
+            attempt+=1;
+        }
+       
+	} while (guess != chitnum);
+        if(guess==chitnum)
 			printf("You guessed the number in %d attempts!\n",attempt);
 
-	} while (guess != chitnum);
 }
 
 
