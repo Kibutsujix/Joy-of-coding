@@ -14,8 +14,6 @@ void generate_random_keys(int key[3][3],int i)
 		return;
 	}
 	else{
-		row = rand()%3;
-		col = rand()%3;
 		generate_random_keys(key,i);
 	}
 } 
